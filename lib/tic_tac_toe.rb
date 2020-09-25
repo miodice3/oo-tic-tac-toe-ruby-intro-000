@@ -28,14 +28,14 @@ class TicTacToe
     end
 	    
     def input_to_index(input)
-      @index = input.to_i - 1
+      input.to_i - 1
     end
 
 
     def move(index, sign = "X")
-      @index = index
-      @sign = sign
-      [index] = sign
+      #@index = index
+      #@sign = sign
+      @board[index] = sign
     end
     
     def position_taken?(board, index)
