@@ -30,10 +30,10 @@ class TicTacToe
     end
 
 
-
-#def move(board, index, sign)
-def move(board, index, sign = "X")
-  board[index] = sign
-end
+    def move(index, sign = "X")
+      @index = index
+      @sign = sign
+      [index] = sign
+    end
 	    
 end 
