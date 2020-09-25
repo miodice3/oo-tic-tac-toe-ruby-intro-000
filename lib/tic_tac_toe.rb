@@ -36,10 +36,20 @@ class TicTacToe
       [index] = sign
     end
     
-    def position_taken?
+    def position_taken?(board, index)
+      @board = board
+      @index = index
+      
 
 
 
+def position_taken?(board, index) 
+  if board[index] == " " || board[index] == "" || board[index] == nil
+    false
+  else board[index] == "X" || board[index] == "O"
+    true
+  end
+end
 
 	   
 end 
