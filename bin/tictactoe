@@ -2,25 +2,4 @@
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
 
-
-def play(board)
-  while turn_count(board) <= 8
-    
-    
-    turn(board)
-    
-    #puts "turn count is #{turn_count(board)}"
-
-#    won?(board)
-    if over?(board) == true && winner(board) != nil
-      puts "winner is #{winner(board)}"
-      return
-    elsif over?(board) == true && draw?(board) == true
-      puts "Cat's Game!"
-      return
-      
-    end
-    
-  end
-  #draw?(board)
-end
+TicTacToe.new 
