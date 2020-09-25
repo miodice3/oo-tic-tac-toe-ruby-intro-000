@@ -155,13 +155,13 @@ def draw?
 end
 
 
-def over?(board)
+def over?
   #accepts board returns TRUE if WON, is a DRAW, or is FULL
-  if wontf?(board) == true
+  if wontf? == true
     true
-  elsif draw?(board) == true
+  elsif draw? == true
     true
-  elsif full?(board) == true
+  elsif full? == true
     true
   else
     false
