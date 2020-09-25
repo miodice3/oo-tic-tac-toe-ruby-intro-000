@@ -158,5 +158,18 @@ def draw?(board)
 end
 
 
+def over?(board)
+  #accepts board returns TRUE if WON, is a DRAW, or is FULL
+  if wontf?(board) == true
+    true
+  elsif draw?(board) == true
+    true
+  elsif full?(board) == true
+    true
+  else
+    false
+  end
+end
+
 
 end 
