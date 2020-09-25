@@ -35,5 +35,7 @@ class TicTacToe
       @sign = sign
       [index] = sign
     end
+    
+    def position_taken?
 	    
 end 
