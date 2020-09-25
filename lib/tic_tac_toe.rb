@@ -1,4 +1,4 @@
-
+require_relative
 
 class TicTacToe
   #all methods shall be within this class
