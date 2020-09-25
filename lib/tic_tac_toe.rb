@@ -172,4 +172,29 @@ def over?(board)
 end
 
 
+
+def winner(board)
+#accepts BOARD, return "X" or "O" that has won the game. return FALSE if no winner
+  WIN_COMBINATIONS.each do |win_combination|
+    #puts win_combination.inspect
+    win_index_1 = win_combination[0]
+    win_index_2 = win_combination[1]
+    win_index_3 = win_combination[2]
+    
+    position_1 = board[win_index_1] # load the value of the board at win_index_1
+    position_2 = board[win_index_2] # load the value of the board at win_index_2
+    position_3 = board[win_index_3] # load the value of the board at win_index_3    
+
+    if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+      #puts "position_1: A"
+      #puts position_1
+      return position_1
+    end
+
+  end
+    #puts "nil"
+    nil
+end
+
+
 end 
