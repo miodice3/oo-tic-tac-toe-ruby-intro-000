@@ -1,4 +1,4 @@
-require_relative
+require_relative "../lib/tic_tac_toe.rb"
 
 class TicTacToe
   #all methods shall be within this class
