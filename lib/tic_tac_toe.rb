@@ -127,4 +127,36 @@ class TicTacToe
     end
 
 
+def draw?(board)
+#DRAW accepts a board 
+#returns true if the board has not been won but is full (TRUE if DRAW)
+#false if the board is not won and the board is not full (FALSE if NO win && not yet finished)
+#false if the board is won. (FALSE if WON)
+      if full?(board) == true
+        #puts "true A"
+        true
+      elsif won?(board) == false
+        #puts "false B"
+        false
+      elsif
+          WIN_COMBINATIONS.each do |win_combination|
+          #puts win_combination.inspect
+          win_index_1 = win_combination[0]
+          win_index_2 = win_combination[1]
+          win_index_3 = win_combination[2]
+          
+          position_1 = board[win_index_1] # load the value of the board at win_index_1
+          position_2 = board[win_index_2] # load the value of the board at win_index_2
+          position_3 = board[win_index_3] # load the value of the board at win_index_3    
+    
+            if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+             #puts "false C"
+             false
+            end
+      end
+    end
+end
+
+
+
 end 
