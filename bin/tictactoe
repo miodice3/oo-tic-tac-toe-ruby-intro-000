@@ -3,8 +3,6 @@ require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
 
 
-
-=begin
 def play(board)
   while turn_count(board) <= 8
     
@@ -26,4 +24,3 @@ def play(board)
   end
   #draw?(board)
 end
-=end
