@@ -216,4 +216,19 @@ def winner
 end
 
 
+    def play
+      while turn_count <= 8
+        turn
+        if over? == true && winner != nil
+          puts "winner is #{winner}"
+          return
+        elsif over?(board) == true && draw?(board) == true
+          puts "Cat's Game!"
+          return
+        end
+      end
+    end
+
+
+
 end 
