@@ -41,8 +41,10 @@ class TicTacToe
       @index = index
       if @board[@index] == " " || @board[@index] == "" || @board[@index] == nil
             false
+      elsif @board[@index] == "X" || @board[@index] == "O"
+            return true
       else
-        true
+        nil
       end
     end
 
