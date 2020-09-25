@@ -222,7 +222,7 @@ end
         if over? == true && winner != nil
           puts "winner is #{winner}"
           return
-        elsif over?(board) == true && draw?(board) == true
+        elsif over? == true && draw? == true
           puts "Cat's Game!"
           return
         end
