@@ -109,4 +109,22 @@ class TicTacToe
       end
 
 
+    def full?(board)
+    #returns false for an in-progress game 
+      i = 0
+      while i <= 8
+            if board[i] == "X" || board[i] == "O"
+              true
+            else
+              return false
+            end
+            i = i + 1
+      end
+      #returns true for a draw (FAILED - 1)
+      if true
+        !won?(board)
+      end
+    end
+
+
 end 
