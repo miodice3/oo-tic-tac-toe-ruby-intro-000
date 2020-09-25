@@ -38,7 +38,7 @@ class TicTacToe
     
     def position_taken?(board, index)
       #@board = board
-      #@index = index
+      #@index = index #check bool statements, dont need if.
       if @board[@index] == " " || @board[@index] == "" || @board[@index] == nil
             false
       elsif @board[@index] == "X" || @board[@index] == "O"
