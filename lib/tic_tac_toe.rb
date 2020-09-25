@@ -56,17 +56,16 @@ class TicTacToe
     
     def turn(board)
       @board = board
-        puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  #puts index
-  if valid_move?(board, index) == true
-    move(board, index, sign=current_player(board))
-    display_board(board)
-  else
-   puts "your move is not valid, please try again"
-   turn(board)
- end
+      puts "Please enter 1-9:"
+      @input = gets.strip
+      @index = input_to_index(input)
+      if valid_move?(@board, @index) == true
+        move(@board, @index, @sign=current_player(@board))
+        display_board(@board)
+      else
+       puts "your move is not valid, please try again"
+       turn(board)
+     end
 
       
     end 
