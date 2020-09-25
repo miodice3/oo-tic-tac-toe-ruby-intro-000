@@ -106,11 +106,11 @@ class TicTacToe
       end
 
 
-    def full?(board)
+    def full?
     #returns false for an in-progress game 
       i = 0
       while i <= 8
-            if board[i] == "X" || board[i] == "O"
+            if @board[i] == "X" || @board[i] == "O"
               true
             else
               return false
@@ -119,20 +119,20 @@ class TicTacToe
       end
       #returns true for a draw (FAILED - 1)
       if true
-        !won?(board)
+        !won?
       end
     end
 
 
-def draw?(board)
+def draw?
 #DRAW accepts a board 
 #returns true if the board has not been won but is full (TRUE if DRAW)
 #false if the board is not won and the board is not full (FALSE if NO win && not yet finished)
 #false if the board is won. (FALSE if WON)
-      if full?(board) == true
+      if full? == true
         #puts "true A"
         true
-      elsif won?(board) == false
+      elsif won? == false
         #puts "false B"
         false
       elsif
@@ -142,11 +142,11 @@ def draw?(board)
           win_index_2 = win_combination[1]
           win_index_3 = win_combination[2]
           
-          position_1 = board[win_index_1] # load the value of the board at win_index_1
-          position_2 = board[win_index_2] # load the value of the board at win_index_2
-          position_3 = board[win_index_3] # load the value of the board at win_index_3    
+          position_1 = @board[win_index_1] # load the value of the board at win_index_1
+          position_2 = @board[win_index_2] # load the value of the board at win_index_2
+          position_3 = @board[win_index_3] # load the value of the board at win_index_3    
     
-            if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+            if position_1 == position_2 && position_2 == position_3 && position_taken?(win_index_1)
              #puts "false C"
              false
             end
