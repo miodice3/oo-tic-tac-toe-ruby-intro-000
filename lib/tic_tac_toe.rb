@@ -40,7 +40,7 @@ class TicTacToe
       #check bool statements, dont need if.
       if board[index] == " " || board[index] == "" || board[index] == nil
             false
-      elsif @board[@index] == "X" || @board[@index] == "O"
+      elsif board[index] == "X" || board[index] == "O"
             return true
       else
         nil
