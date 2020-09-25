@@ -36,11 +36,11 @@ class TicTacToe
       @board[index] = sign
     end
     
-    def position_taken?(board, index)
+    def position_taken?(index)
       #check bool statements, dont need if.
-      if board[index] == " " || board[index] == "" || board[index] == nil
+      if @board[index] == " " || @board[index] == "" || @board[index] == nil
             false
-      elsif board[index] == "X" || board[index] == "O"
+      elsif @board[index] == "X" || @board[index] == "O"
             return true
       else
         nil
