@@ -169,6 +169,28 @@ def over?
 end
 
 
+def wontf?
+  #accepts board, returns FALSE if NO WIN combination, RETURN WIN COMBO if WON
+  WIN_COMBINATIONS.each do |win_combination|
+    #puts win_combination.inspect
+    win_index_1 = win_combination[0]
+    win_index_2 = win_combination[1]
+    win_index_3 = win_combination[2]
+    
+    position_1 = @board[win_index_1] # load the value of the board at win_index_1
+    position_2 = @board[win_index_2] # load the value of the board at win_index_2
+    position_3 = @board[win_index_3] # load the value of the board at win_index_3    
+
+    if position_1 == position_2 && position_2 == position_3 && position_taken?(win_index_1)
+     return true
+    end
+  end
+  false
+end
+
+
+
+
 
 def winner(board)
 #accepts BOARD, return "X" or "O" that has won the game. return FALSE if no winner
